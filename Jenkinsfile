@@ -13,6 +13,11 @@ pipeline {
             tool 'maven'
           }
         }
+        stage('Testing maven version') {
+          steps {
+            sh 'mvn -version'
+          }
+        }
       }
     }
     stage('test') {
