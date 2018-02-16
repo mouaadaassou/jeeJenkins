@@ -1,28 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('build') {
-      parallel {
-        stage('build') {
-          steps {
-            git(url: 'https://github.com/mouaadaassou/jeeJenkins.git', branch: 'master')
-          }
-        }
-        stage('Setup Maven') {
-          steps {
-            tool 'maven'
-          }
-        }
-        stage('Testing maven version') {
-          steps {
-            sh 'mvn -version'
-          }
-        }
-      }
+  agent {
+    docker {
+      image 'openjdk:8u121-jdk-alpine'
     }
-    stage('test') {
+    
+  }
+  stages {
+    stage('testing-maven') {
       steps {
-        sh 'mvn clean test'
+        sh 'mvn -version'
       }
     }
   }
