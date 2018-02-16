@@ -8,7 +8,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        build 'testing using junit'
+        sh 'mvn clean test'
       }
     }
   }
