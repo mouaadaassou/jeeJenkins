@@ -11,5 +11,10 @@ pipeline {
         sh 'echo "Docker Version"'
       }
     }
+    stage('') {
+      steps {
+        sh 'mvn --version'
+      }
+    }
   }
 }
