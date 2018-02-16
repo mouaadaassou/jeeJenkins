@@ -6,9 +6,9 @@ pipeline {
         sh 'docker --version'
       }
     }
-    stage('display name') {
+    stage('maven version') {
       steps {
-        sh 'echo "Docker Version"'
+        sh 'mvn --version'
       }
     }
     stage('java --version') {
