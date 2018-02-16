@@ -6,5 +6,10 @@ pipeline {
         sh 'docker --version'
       }
     }
+    stage('display name') {
+      steps {
+        sh 'echo "Docker Version"'
+      }
+    }
   }
 }
