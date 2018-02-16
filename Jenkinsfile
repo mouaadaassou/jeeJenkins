@@ -11,7 +11,7 @@ pipeline {
         sh 'mvn --version'
       }
     }
-    stage('java --version') {
+    stage('java version') {
       steps {
         sh 'java -version'
       }
