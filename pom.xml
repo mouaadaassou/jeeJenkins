@@ -14,15 +14,13 @@
   <properties>
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
-  </properties>
-         
-   <properties>
-            <!-- Optional URL to server. Default value is http://localhost:9000 -->
+     <!-- Optional URL to server. Default value is http://localhost:9000 -->
             <sonar.host.url>
               http://sonarqube
             </sonar.host.url>
-        </properties>
-
+  </properties>
+         
+  
   <modules>
     <module>server</module>
     <module>webapp</module>
